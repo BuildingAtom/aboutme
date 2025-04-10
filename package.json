@@ -2,6 +2,7 @@
   "name": "simple-aboutme",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@10.8.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
