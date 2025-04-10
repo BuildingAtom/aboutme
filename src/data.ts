@@ -6,7 +6,7 @@ export const heroBlurb = {
     'I am a robotics researcher focused on representations to enable safety ' +
     'for robots in order to bring autonomous robots into everyday life.'
     ,
-    'I received my MS in Robotics from the Robotics Institute at the University ' +
+    'I received my MS in Robotics from the Department of Robotics at the University ' +
     'of Michigan, where I was a member of ROAHM Lab supervised by Prof. Ram Vasudevan. ' +
     'I also hold a BS in Electrical Engineering and Mechanical Engineering from ' +
     'Rensselaer Polytechnic Institute.'
