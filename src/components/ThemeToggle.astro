@@ -2,7 +2,7 @@
 import {coreSettings} from  '@/settings'
 ---
 
-<button class="transition-all rounded-xl p-2 hover:bg-primary/20 fill-base-content" data-toggle-theme={coreSettings.themes}>
+<button class="transition-all rounded-xl p-2 hover:bg-primary/20 fill-base-content" data-toggle-theme={coreSettings.themes.join(',')}>
   <!-- Sun -->
   <i class="bi bi-sun w-8 h-8 text-[2rem]/[0] block dark:hidden"></i>
   <!-- Moon -->

@@ -8,6 +8,7 @@ export interface CoreSettings {
   // Theme settings
   themes: string[],
   darkModeTheme: string,
+  defaultTheme: string,
   // SEO settings
   title: string,
   description?: string,
