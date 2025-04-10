@@ -1,0 +1,12 @@
+---
+import {socials} from '@/data'
+
+---
+
+<div class='flex flex-wrap justify-between items-center'>
+  {socials.map(item => (
+    <a href={item.href} aria-label={item.label} class={`size-[3rem] inline-flex items-center justify-center rounded-xl hover:bg-primary/20 transition-all`}>
+      <div class={`size-[1.5rem] text-[1.5rem]/[0] text-center m-0 p-0`} set:html={item.icon} />
+    </a>
+  ))}
+</div>

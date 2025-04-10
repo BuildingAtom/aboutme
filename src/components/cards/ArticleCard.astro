@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import { coreSettings } from '@/settings';
+import { type ResearchInfo } from '@/types';
+
+interface Props {
+    item: ResearchInfo;
+}
+const { item } = Astro.props
+
+function highlightAuthor(authors: string[]): string {
+    return authors
+        .map(author => {
+            const match = author.match(/^(.*?)([*]+)?$/); // Match the name and trailing symbols
+            const cleanName = match?.[1] || author; // Extract the name
+            const suffix = match?.[2] || ''; // Extract the trailing symbols
+            return cleanName === coreSettings.name
+                ? `<span class='font-bold underline'>${cleanName}</span>${suffix}`
+                : author;
+        })
+        .join(', ');
+}
+---
+
+{item.image &&
+    <Image
+        src={item.image}
+        alt={item.title}
+        class='w-full sm:w-52 h-48 sm:h-auto object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-r-none flex-grow-0 flex-shrink-0'
+    />
+}
+<div class='p-6 rounded-lg text-base-content'><h3 class='text-2xl font-semibold mb-2'>{item.title}</h3>
+    <p class='text-base mb-2' set:html={highlightAuthor(item.authors)} />
+    <p class={`text-sm mb-3 text-gray-600 ${item.review ? 'italic' : ''}`}>
+        {item.review ? 'Under Review • ' : ''}{item.journal} • {item.time}
+    </p>
+</div>

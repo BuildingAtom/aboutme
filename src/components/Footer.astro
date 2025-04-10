@@ -1,0 +1,17 @@
+---
+import { coreSettings } from '@/settings'
+import SocialIcons from './SocialIcons.astro'
+
+const { name, username } = coreSettings
+---
+
+<footer class='footer footer-center bg-base-100 text-base-content px-4 py-8'>
+  <aside>
+    <p>
+      &copy;{new Date().getFullYear()} {name} / {username}
+    </p>
+    <div class='mx-4'>
+      <SocialIcons/>
+    </div>
+  </aside>
+</footer>

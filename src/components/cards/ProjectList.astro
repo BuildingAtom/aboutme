@@ -1,0 +1,20 @@
+---
+import type { ProjectsList as Props} from '@/types'
+import ProjectCard from './ProjectCard.astro'
+
+const {title, items} = Astro.props
+---
+
+<h2 class='text-3xl font-bold mb-6'>{title}</h2>
+<div class='space-y-6'>
+  {items.map(item => (
+    item.disabled ?
+    <div class='flex flex-col sm:flex-row rounded-lg bg-base-200'>
+      <ProjectCard item={item} />
+    </div>
+    :
+    <a href={item.link} class='flex flex-col sm:flex-row rounded-lg bg-base-200 transition-brightness duration-150 hover:shadow-lg hover:brightness-90' target="_blank">
+      <ProjectCard item={item} />
+    </a>
+  ))}
+</div>

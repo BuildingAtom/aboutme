@@ -1,0 +1,31 @@
+---
+import Layout from '@/layouts/base.astro'
+
+import { coreSettings } from '@/settings'
+import { research, projectsLists } from '@/data'
+import Hero from '@/components/Hero.astro'
+import ArticleList from '@/components/cards/ArticleList.astro'
+import ProjectList from '@/components/cards/ProjectList.astro'
+
+const { name } = coreSettings
+---
+
+<Layout>
+  {/* Hero Section */}
+  <section class='border-b pb-12'>
+    <Hero />
+  </section>
+
+  {research.length > 0 && (
+  <section class='py-8 border-b'>
+    <ArticleList listTitle='Research Work' listItems={research} />
+  </section>
+  )}
+
+  {projectsLists.map(projectsList => (
+    projectsList.items.length > 0 && !projectsList.disabled &&
+    <section class='py-8 border-b'>
+      <ProjectList title={projectsList.title} items={projectsList.items}/>
+    </section>
+  ))}
+</Layout>

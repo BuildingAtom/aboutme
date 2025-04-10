@@ -1,0 +1,42 @@
+---
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import Head from '@/components/Head.astro'
+
+import { coreSettings } from '@/settings'
+import Footer from '@/components/Footer.astro'
+
+type Props = {
+  title?: string
+  description?: string
+  image?: string
+}
+
+const {
+  title = coreSettings.title,
+  description = coreSettings.description,
+  image = coreSettings.image,
+} = Astro.props
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <Head title={title} description={description} image={image} />
+  </head>
+  <body class="transition-colors duration-200">
+    <div class='bg-base-100'>
+      <div class='drawer-content bg-base-100'>
+        <nav class='navbar lg:max-w-5xl max-w-full mx-auto flex-row-reverse pr-10 pt-5'>
+          <ThemeToggle/>
+        </nav>
+        <main class='p-8 pt-8 lg:pt-10 lg:max-w-5xl max-w-full mx-auto min-h-screen flex flex-col justify-between'>
+        { // Page Content
+          <slot />
+        }
+        <Footer />
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+
