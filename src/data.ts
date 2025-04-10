@@ -99,29 +99,60 @@ export const research: ResearchInfo[] = [
 //// This is the data for the projects
 import { type ProjectsList } from '@/types';
 import sevaImage from '@/assets/seva.jpeg'
+import zonopyImage from '@/assets/zonopy.webp'
+import marlImage from '@/assets/marl.webp'
+import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
 
 export const projectsLists: ProjectsList[] = [
   {
-    title: 'Contributions',
+    title: 'Contributor',
     items: [
+    {
+      image: zonopyImage,
+      title: 'Zonopy and zonopy-robots',
+      info: 'A Python library for reachable set computation',
+      description:
+        'Zonopy enables the computation of continuous sets (intervals, zonotops, and polynomial zonotopes), and '+
+        'zonopy-robots introduces method extensions and algorithms for robotics. As one of the primary contributors, I\'ve ' +
+        'continued to expand on and improve these libraries for usability and performance.',
+      link: 'https://roahmlab.github.io/zonopy-robots/',
+    },
     {
       image: sevaImage,
       title: 'SEVA: Socio-Ecological Visual Analytics',
-      info: 'Fall 2018 @ RPI CASE (Center for Architecture Science and Ecology)',
-      description: 'Contributed to the data visualization and analysis code as part of the frontend team.',
+      info: 'A data and knowledge management framework with a dynamic dashboard for big data analysis.',
+      description: 'I was part of the frontend team at the Center for Architecture Science and Ecology (CASE) at Rensselaer in 2018, where I implemented UI and UX elements and helped migrate data visualization and analysis code away from unmaintained libraries.',
       link: 'https://www.cea.yale.edu/research-frameworks/seva',
     },
   ]},
   {
     title: 'Select Projects',
-    disabled: true,
     items: [
     {
-      // image: sevaImage,
-      title: 'SEVA: Socio-Ecological Visual Analytics',
-      // info: 'Fall 2018 @ RPI CASE (Center for Architecture Science and Ecology)',
-      description: 'Contributed to the data visualization and analysis code as part of the frontend team.',
-      link: 'https://www.cea.yale.edu/research-frameworks/seva',
+      image: marlImage,
+      title: 'Multi-Agent Reinforcement Learning to Solve Collaborative Escape-Room Style Tasks',
+      info: 'Will agents learn to communicate and escape from a simplified escape-room style game?',
+      description: 'For our final project for EECS692 Advanced AI at Michigan, we developed a simplified model for escape-room style tasks, ' +
+        'and implemented it as an environment to perform multi-agent reinforcement learning. Puzzle rooms are chained together to create a larger escape-room style task. ',
+      link: 'https://github.com/lattimer7/EECS692Final',
+    },
+    {
+      image: ddpgFetchImage,
+      title: 'Reinforcement Learning using DDPG for Robotic Grasping',
+      info: 'Exploring reward shaping, DDPG, and RL for manipulation',
+      description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm' +
+        'to train a robotic manipulator to grasp in a custom OpenAI Gym environment. The goal was to grasp a block on the table without moving it and reward shaping was ' +
+        'employed to learn this. Through the inclusion of regularization, we demonstrated superior results over the baseline implementation. ',
+      link: 'https://github.com/lattimer7/EECS692Final',
+    },
+    {
+      title: 'CleanTwrpTar',
+      info: 'Basic C program written to recover my corrupted phone backups',
+      description: 'Back in 2017, I was restoring my phone from a TWRP nandroid backup, and discovered that all of my backups were corrupted. '+
+        'After inspection, it turned out that one of the other standard streams used for verbose logging occasionally output to the tarfile. ' +
+        'This program was written to remove strings inserted between the 512 byte data blocks boundaries where these logging strings were inserted. ' +
+        'A friend and I wrote separate solutions to this problem, and we have saved countless others\' backups as as result.',
+      link: 'https://github.com/BuildingAtom/CleanTwrpTar',
     },
   ]},
 ];
