@@ -8,7 +8,12 @@ export default {
     extend: {},
   },
   darkMode: ['selector', `[data-theme="${coreSettings.darkModeTheme}"]`],
-  plugins: [require("@tailwindcss/typography"), require("daisyui"), require("@csstools/postcss-oklab-function"), require("autoprefixer")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    // require("@csstools/postcss-oklab-function"),
+    require("autoprefixer"),
+    ],
   daisyui: {
     themes: coreSettings.themes,
   },
