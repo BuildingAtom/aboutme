@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import postCssOklabPolyfill from '@csstools/postcss-oklab-function'
 import autoprefixer from 'autoprefixer'
+import Unfonts from 'unplugin-fonts/astro'
 
 import { coreSettings } from './src/settings';
 
@@ -12,15 +13,31 @@ export default defineConfig({
   site: coreSettings.site,
   base: coreSettings.basepath,
   trailingSlash: 'ignore',
-  integrations: [tailwind()],
+  integrations: [
+    tailwind(),
+    Unfonts({
+      google: {
+        families: [
+          {
+            name: 'Open+Sans',
+            styles: 'wght@400;500;600;700',
+          },
+          {
+            name: 'Lato',
+            styles: 'wght@400;500;600;700',
+          }
+        ],
+      },
+    }),
+  ],
   vite: {
     css: {
       postcss: {
         plugins: [
-          autoprefixer(),
           postCssOklabPolyfill({
             preserve: true,
           }),
+          autoprefixer(),
         ],
       },
     },
