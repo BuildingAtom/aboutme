@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import postCssOklabPolyfill from '@csstools/postcss-oklab-function'
+import autoprefixer from 'autoprefixer'
 
 import { coreSettings } from './src/settings';
 
@@ -11,4 +13,16 @@ export default defineConfig({
   base: coreSettings.basepath,
   trailingSlash: 'ignore',
   integrations: [tailwind()],
+  vite: {
+    css: {
+      postcss: {
+        plugins: [
+          autoprefixer(),
+          postCssOklabPolyfill({
+            preserve: true,
+          }),
+        ],
+      },
+    },
+  },
 });
