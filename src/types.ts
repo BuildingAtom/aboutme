@@ -17,6 +17,7 @@ export interface CoreSettings {
 
 export interface ResearchInfo {
   image: ImageMetadata;
+  dontOptimizeImage?: boolean,
   title: string,
   journal: string,
   time: string,
@@ -28,6 +29,7 @@ export interface ResearchInfo {
 
 export interface ProjectInfo {
   image?: ImageMetadata,
+  dontOptimizeImage?: boolean,
   title: string,
   info?: string,
   description: string,

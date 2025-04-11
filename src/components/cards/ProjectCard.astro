@@ -9,9 +9,19 @@ const { item } = Astro.props
 
 ---
 
-{item.image &&
+{ // Optimize the image if it exists and we aren't skipping optimization
+item.image && !item.dontOptimizeImage &&
   <Image
     src={item.image}
+    alt={item.title}
+    class='w-full sm:w-52 h-48 sm:h-auto object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-r-none flex-grow-0 flex-shrink-0'
+  />}
+{ // Otherwise don't optimize the image
+item.image && item.dontOptimizeImage &&
+  <img
+    src={item.image.src}
+    height={item.image.height}
+    width={item.image.width}
     alt={item.title}
     class='w-full sm:w-52 h-48 sm:h-auto object-cover rounded-t-lg sm:rounded-l-lg sm:rounded-r-none flex-grow-0 flex-shrink-0'
   />

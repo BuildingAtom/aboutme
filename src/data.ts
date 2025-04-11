@@ -109,6 +109,7 @@ export const projectsLists: ProjectsList[] = [
     items: [
     {
       image: zonopyImage,
+      dontOptimizeImage: true,
       title: 'Zonopy and zonopy-robots',
       info: 'A Python library for reachable set computation',
       description:
@@ -130,6 +131,7 @@ export const projectsLists: ProjectsList[] = [
     items: [
     {
       image: marlImage,
+      dontOptimizeImage: true,
       title: 'Multi-Agent Reinforcement Learning to Solve Collaborative Escape-Room Style Tasks',
       info: 'Will agents learn to communicate and escape from a simplified escape-room style game?',
       description: 'For our final project for EECS692 Advanced AI at Michigan, we developed a simplified model for escape-room style tasks, ' +
@@ -138,6 +140,7 @@ export const projectsLists: ProjectsList[] = [
     },
     {
       image: ddpgFetchImage,
+      dontOptimizeImage: true,
       title: 'Reinforcement Learning using DDPG for Robotic Grasping',
       info: 'Exploring reward shaping, DDPG, and RL for manipulation',
       description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm' +
