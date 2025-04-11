@@ -146,7 +146,8 @@ export const projectsLists: ProjectsList[] = [
       description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm' +
         'to train a robotic manipulator to grasp in a custom OpenAI Gym environment. The goal was to grasp a block on the table without moving it and reward shaping was ' +
         'employed to learn this. Through the inclusion of regularization, we demonstrated superior results over the baseline implementation. ',
-      link: 'https://github.com/lattimer7/EECS692Final',
+      link: '',
+      disabled: true,
     },
     {
       title: 'CleanTwrpTar',
