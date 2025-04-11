@@ -143,7 +143,7 @@ export const projectsLists: ProjectsList[] = [
       dontOptimizeImage: true,
       title: 'Reinforcement Learning using DDPG for Robotic Grasping',
       info: 'Exploring reward shaping, DDPG, and RL for manipulation',
-      description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm' +
+      description: 'For our final project for EECS545 Machine Learning, we implemented Lilicrap et al.\'s Deep Deterministic Policy Gradient algorithm ' +
         'to train a robotic manipulator to grasp in a custom OpenAI Gym environment. The goal was to grasp a block on the table without moving it and reward shaping was ' +
         'employed to learn this. Through the inclusion of regularization, we demonstrated superior results over the baseline implementation. ',
       link: '',
@@ -154,8 +154,8 @@ export const projectsLists: ProjectsList[] = [
       info: 'Basic C program written to recover my corrupted phone backups',
       description: 'Back in 2017, I was restoring my phone from a TWRP nandroid backup, and discovered that all of my backups were corrupted. '+
         'After inspection, it turned out that one of the other standard streams used for verbose logging occasionally output to the tarfile. ' +
-        'This program was written to remove strings inserted between the 512 byte data blocks boundaries where these logging strings were inserted. ' +
-        'A friend and I wrote separate solutions to this problem, and we have saved countless others\' backups as as result.',
+        'This program was written to remove strings inserted between the 512 byte data block boundaries where these logging strings were inserted. ' +
+        'A friend and I wrote separate solutions to this problem, and we have saved countless others\' backups as a result.',
       link: 'https://github.com/BuildingAtom/CleanTwrpTar',
     },
   ]},
