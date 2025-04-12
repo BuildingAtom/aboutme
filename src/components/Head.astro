@@ -52,30 +52,34 @@ const { title, description, image } = Astro.props
 }
 
 <!-- Theme selector scripts -->
-<script is:inline>
-  // Get stored theme or default to light
+<script is:inline define:vars={{
+    lightModeTheme: coreSettings.lightModeTheme,
+    darkModeTheme: coreSettings.darkModeTheme,
+    defaultTheme: coreSettings.defaultTheme,
+  }}>
+  // Get stored theme or default
   const getStoredTheme = () => {
-    return localStorage.getItem('theme') || coreSettings.defaultTheme;
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      return storedTheme;
+    }
+    // Check for system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return darkModeTheme;
+    }
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return lightModeTheme;
+    }
+    return defaultTheme;
   }
 
   // Apply theme immediately to prevent flash
   const theme = getStoredTheme();
   document.documentElement.setAttribute('data-theme', theme);
-
-  // Re-apply theme after navigation
-  document.addEventListener('astro:after-swap', () => {
-    const currentTheme = getStoredTheme();
-    document.documentElement.setAttribute('data-theme', currentTheme);
-  });
 </script>
 <script>
   import { themeChange } from 'theme-change'
   themeChange()
-
-  // Re-initialize after Astro view transitions
-  document.addEventListener('astro:after-swap', () => {
-    themeChange(false); // false = don't persist to localStorage
-  });
 </script>
 
 <!-- Academic Icons and Bootstrap Icons -->

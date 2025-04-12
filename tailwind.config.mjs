@@ -7,7 +7,6 @@ export default {
   theme: {
     extend: {},
   },
-  darkMode: ['selector', `[data-theme="${coreSettings.darkModeTheme}"]`],
   plugins: [
     require("@tailwindcss/typography"),
     require("daisyui"),
@@ -15,8 +14,13 @@ export default {
     require("autoprefixer"),
     ],
   daisyui: {
-    themes: coreSettings.themes,
+    themes: [
+      coreSettings.darkModeTheme,
+      coreSettings.lightModeTheme,
+    ],
+    darkTheme: coreSettings.darkModeTheme,
   },
+  darkMode: ['selector', `[data-theme="${coreSettings.darkModeTheme}"]`],
   theme: {
     extend: {
       fontFamily: {

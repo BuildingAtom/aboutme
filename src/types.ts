@@ -6,7 +6,7 @@ export interface CoreSettings {
   name: string,
   username: string,
   // Theme settings
-  themes: string[],
+  lightModeTheme: string,
   darkModeTheme: string,
   defaultTheme: string,
   // SEO settings

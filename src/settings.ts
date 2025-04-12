@@ -1,7 +1,7 @@
 import type { CoreSettings } from "./types"
 
 export const coreSettings : CoreSettings = {
-  themes: ["fantasy", "dark"],
+  lightModeTheme: "fantasy",
   darkModeTheme: "dark",
   defaultTheme: "fantasy",
   site: "https://about.buildingatom.io",
