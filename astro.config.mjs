@@ -34,9 +34,9 @@ export default defineConfig({
     css: {
       postcss: {
         plugins: [
-          // postCssOklabPolyfill({
-          //   preserve: true,
-          // }),
+          postCssOklabPolyfill({
+            preserve: true,
+          }),
           autoprefixer(),
         ],
       },

@@ -10,7 +10,7 @@ export default {
   plugins: [
     require("@tailwindcss/typography"),
     require("daisyui"),
-    // require("@csstools/postcss-oklab-function"),
+    require("@csstools/postcss-oklab-function"),
     require("autoprefixer"),
     ],
   daisyui: {
