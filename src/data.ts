@@ -3,8 +3,8 @@ import profilePicture from '@/assets/me.jpg'
 export const heroBlurb = {
   profilePicture: profilePicture,
   paragraphs: [
-    'I am a robotics researcher focused on representations to enable safety ' +
-    'for robots in order to bring autonomous robots into everyday life.'
+    'I am a robotics researcher focused on representations that enable better behaviors and ' +
+    'greater safety for robots in order to bring autonomous robots into everyday life.'
     ,
     'I received my MS in Robotics from the Department of Robotics at the University ' +
     'of Michigan, where I was a member of ROAHM Lab supervised by Prof. Ram Vasudevan. ' +
