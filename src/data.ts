@@ -102,7 +102,7 @@ import sevaImage from '@/assets/seva.jpeg'
 import zonopyImage from '@/assets/zonopy.webp'
 import marlImage from '@/assets/marl.webp'
 import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
-import rtdImage from '@/assets/rtd.gif'
+// import rtdImage from '@/assets/rtd.gif'
 import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
 export const projectsLists: ProjectsList[] = [
@@ -121,7 +121,7 @@ export const projectsLists: ProjectsList[] = [
       link: 'https://roahmlab.github.io/zonopy-robots/',
     },
     {
-      image: rtdImage,
+      // image: rtdImage,
       dontOptimizeImage: true,
       title: 'RTD-Code unified toolkit',
       info: 'A unified architecture and codebase for the Reachbility-based Trajectory Design Projects at ROAHM Lab',
