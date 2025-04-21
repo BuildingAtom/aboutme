@@ -102,6 +102,8 @@ import sevaImage from '@/assets/seva.jpeg'
 import zonopyImage from '@/assets/zonopy.webp'
 import marlImage from '@/assets/marl.webp'
 import ddpgFetchImage from '@/assets/ddpg_fetch.webp'
+import rtdImage from '@/assets/rtd.gif'
+import lineartDiffusionImage from '@/assets/lineart_diffusion.webp'
 
 export const projectsLists: ProjectsList[] = [
   {
@@ -119,6 +121,18 @@ export const projectsLists: ProjectsList[] = [
       link: 'https://roahmlab.github.io/zonopy-robots/',
     },
     {
+      image: rtdImage,
+      dontOptimizeImage: true,
+      title: 'RTD-Code unified toolkit',
+      info: 'A unified architecture and codebase for the Reachbility-based Trajectory Design Projects at ROAHM Lab',
+      description: 'RTD-Code is a unified architecture and codebase for the Reachability-based Trajectory Design Projects at ROAHM Lab. ' +
+        'It was designed to be modular and extensible, allowing for easy integration of new algorithms and methods. ' +
+        'The MATLAB version of the toolkit was built on top of CORA, and the Python version is built on top of the Zonopy and zonopy-robots libraries. '+
+        'The goal of the toolkit was to provide a high-level prototyping interface for working with reachable set constraints and trajectory design in a receding-horizon planner.',
+      link: 'https://roahmlab.github.io/rtd-ng/',
+      hide: true,
+    },
+    {
       image: sevaImage,
       title: 'SEVA: Socio-Ecological Visual Analytics',
       info: 'A data and knowledge management framework with a dynamic dashboard for big data analysis.',
@@ -129,6 +143,17 @@ export const projectsLists: ProjectsList[] = [
   {
     title: 'Select Projects',
     items: [
+    {
+      image: lineartDiffusionImage,
+      dontOptimizeImage: true,
+      title: 'Generative Animation Inbetweening',
+      info: 'Diffusion modeling 2D animation like a trajectory to address on animators\' needs',
+      description: 
+        'For animation, most generative models struggle with precision and introduce stylistic changes or errors that are more expensive to fix than simply redrawing from scratch. ' +
+        'I built a model focused on adhering closely to provided keyframes and breakdowns (partial keyframes) to deliver hand‑ready and easily-correctable frames for animators.',
+      link: '',
+      disabled: true,
+    },
     {
       image: marlImage,
       dontOptimizeImage: true,

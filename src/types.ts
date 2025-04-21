@@ -25,6 +25,7 @@ export interface ResearchInfo {
   authors: string[],
   review?: boolean,
   disabled?: boolean,
+  hide?: boolean,
 };
 
 export interface ProjectInfo {
@@ -35,6 +36,7 @@ export interface ProjectInfo {
   description: string,
   link: string,
   disabled?: boolean,
+  hide?: boolean,
 };
 
 export interface ProjectsList {
