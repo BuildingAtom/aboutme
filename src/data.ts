@@ -147,9 +147,9 @@ export const projectsLists: ProjectsList[] = [
       image: lineartDiffusionImage,
       dontOptimizeImage: true,
       title: 'Generative Animation Inbetweening',
-      info: 'Diffusion modeling 2D animation like a trajectory to address on animators\' needs',
+      info: 'Diffusion modeling 2D animation like a trajectory to address animators\' needs',
       description: 
-        'For animation, most generative models struggle with precision and introduce stylistic changes or errors that are more expensive to fix than simply redrawing from scratch. ' +
+        'For animations, most generative video models struggle with precision and introduce stylistic changes or errors that are more expensive to fix than simply redrawing from scratch. ' +
         'I built a model focused on adhering closely to provided keyframes and breakdowns (partial keyframes) to deliver hand‑ready and easily-correctable frames for animators.',
       link: '',
       disabled: true,
