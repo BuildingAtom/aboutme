@@ -64,7 +64,7 @@ export const research: ResearchInfo[] = [
     journal: 'IEEE Transactions on Robotics (IEEE T-RO)',
     time: '2025',
     link: 'https://roahmlab.github.io/splanning/',
-    review: true,
+    review: false,
   },
   {
     image: sparrowsImage,
